@@ -5,10 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Employee;
 use App\Models\Admin;
+use Session;
 use Hash;   
 
 class AuthController extends Controller
 {
+    public function index(){
+        return view('auth.login');
+    }
     public function store(Request $request){
         $admin = Admin::where('username', '=', $request->username)->first();
         $employee = Employee::where('employeeid', '=', $request->username)->first();
@@ -29,13 +33,13 @@ class AuthController extends Controller
         }
         else if($employee)
         {
-            if(Hash::check($request->password, $employee->password))
+            if($request->password == $employee->employeeid)
             {
                 $request->session()->put(
                     ['loginId'=> $employee->id ,
                     'role' => 'employee']
                 );
-                return redirect('/teacher/page');
+                return redirect('/employee/page');
             }
             else
             {
@@ -46,5 +50,13 @@ class AuthController extends Controller
         {
             return back()->with('fail' ,'This Employee ID is not existing');
         }
+    }
+    
+    public function logout(){
+        if(Session::has('loginId')){
+            Session::pull('loginId');
+            return redirect('/');
+        }
+      
     }
 }

@@ -1,0 +1,33 @@
+table{
+    background-color: white;
+    border: 1px outset black;
+    padding: 5px;
+    border: 10px;
+    box-shadow: 1px 1px 1px white;
+}
+thead{
+    color:white;
+    letter-spacing: 1px;;
+    background-color: #337ab7;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+td{
+    background-color: rgb(224, 229, 255);
+    text-transform: capitalize;
+}
+tr th{
+    text-transform: capitalize;
+}
+li{
+    text-transform: capitalize;
+    list-style: none;
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+.container{
+    width: 100%;
+}
+span{
+    font-size: 1em;
+}

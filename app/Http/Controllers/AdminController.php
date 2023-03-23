@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Admin;
+use App\Models\Attendance;
+use App\Models\Employee;
+use App\Models\Leave;
+use Session;
 
 class AdminController extends Controller
 {
@@ -13,7 +18,19 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //
+        $data = array();
+        if(Session::get('role') == "admin")
+        {
+            $id = Admin::where('id', '=' ,Session::get('loginId'))->first();
+            $employee = Employee::all();
+            $attendance = Attendance::all();
+            $leave = Leave::all();
+
+            return view('admin.dashboard', compact('id' , 'employee' , 'attendance', 'leave'));
+        }
+        else{
+            return redirect('/auth')->with('fail' ,'This is For Admin Section');
+        }
     }
 
     /**

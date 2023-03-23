@@ -29,10 +29,6 @@ return new class extends Migration
             $table->string('address');
             $table->string('mobile');
             $table->string('email');
-
-
-            $table->string('last_name');
-
             $table->timestamps();
         });
     }

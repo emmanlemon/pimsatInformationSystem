@@ -1,13 +1,16 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<section class="vh-100" style="background-color: #5096ff;">
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<title>Login Page</title>
+</head>
+<section class="vh-100" style="background-color: #f0f6ff;">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col col-xl-10">
           <div class="card" style="border-radius: 1rem;">
             <div class="row g-0">
               <div class="col-md-6 col-lg-5 d-none d-md-block">
-                <img src="https://img.freepik.com/free-vector/flat-design-customer-support-concept-illustrated_52683-59662.jpg"
-                  alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; height:100%;" />
+                <img src="https://eportfolio.utm.my/artefact/file/download.php?file=931431&view=183997&embedded=1&blogpost=931489"
+                  alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; width: 100%; height:100%;" />
               </div>
               <div class="col-md-6 col-lg-7 d-flex align-items-center">
                 <div class="card-body p-4 p-lg-5 text-black">
@@ -15,7 +18,7 @@
                     @csrf
                     <div class="d-flex align-items-center mb-3 pb-1">
                       <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
-                      <img src="https://scontent.fcrk2-2.fna.fbcdn.net/v/t39.30808-6/300282460_556486902928663_5614063142191300053_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeE7MVl_PSwEOF2JYhk-Jd3KZNeBTNegtF1k14FM16C0XZPusaxLn3EPrAuyYn6d4GElRzMu3RkP749m3nyu5ALe&_nc_ohc=iBPKb64d9HUAX_Z4UER&_nc_ht=scontent.fcrk2-2.fna&oh=00_AfBF8e0oSjyGSCZKoViNI3XfvT2jqcJrhg-kQ5FNOAQklw&oe=63E357B1"
+                      <img src="{{ URL::asset('image/pimsat_logo.jpg') }}"
                       alt="login form" class="img-fluid" style="width:100px; height: 100px;" />
                       <span class="h2 fw-bold mb-0" style="text-align:center;">PIMSAT<br>(San Carlos Campus)</span>
                     </div>
